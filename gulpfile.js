@@ -15,6 +15,6 @@ gulp.task('all', gulp.series.apply(null, tasks));
 gulp.task('watch', gulp.parallel.apply(null, tasks.map((task) =>
     'watch:' + task
 )));
-//gulp.task('default', ['scripts']);
+gulp.task('default', gulp.parallel('scripts'));
 
 process.once('SIGINT', () => process.exit(0));
