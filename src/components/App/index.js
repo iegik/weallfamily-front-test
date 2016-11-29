@@ -7,7 +7,9 @@ import { connect } from 'react-redux'
 
 const App = ({}) => (
   <div className="app slides">
-    <div className="slide slide_loader loader"></div>
+    <div className="slide slide_loader loader">
+      <div className="loader__content">Loading...</div>
+    </div>
     <div className="slide slide_intro intro"></div>
     <div className="slide slide_home home"></div>
     <div className="slide slide_profile profile"></div>
