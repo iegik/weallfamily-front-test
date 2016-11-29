@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import userReducer from '../../Login/reducers/userReducer'
+import userReducer from '../slides/Login/reducers/userReducer'
 
 const appReducers = combineReducers({
     userReducer

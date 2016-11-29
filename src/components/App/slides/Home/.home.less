@@ -1,0 +1,19 @@
+@import '_variables';
+
+.home {
+    opacity: 0.65;
+    transform: scale(397 / 750);
+    transition: opacity 0.85s @bezier-std, transform 0.85s @bezier-std, visibility 0s 0.85s;
+    z-index: 20;
+    .animation-home-in & {
+        opacity: 1;
+        transform: scale(1);
+        transition: opacity 0.85s @bezier-std, transform 0.85s @bezier-std;
+        visibility: visible;
+    }
+    .animation-login-in & {
+        transform: scale(602 / 750);
+        transition: opacity 0.85s @bezier-std, transform 0.85s @bezier-std, visibility 0s 0.85s;
+        visibility: hidden;
+    }
+}

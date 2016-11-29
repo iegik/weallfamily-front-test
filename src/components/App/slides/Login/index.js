@@ -1,10 +1,10 @@
 import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 import getCookie from '../../helpers/getCookie.js';
-import USER from '../../components/Login/constants'
+import USER from '../../components/Login/constants';
 
-let username
-let password
+let username;
+let password;
 
 class Login extends Component {
     static get propTypes() {
@@ -12,7 +12,7 @@ class Login extends Component {
             value: PropTypes.object.isRequired,
             onLogin: PropTypes.func.isRequired,
             onLogout: PropTypes.func.isRequired
-        }
+        };
     }
     componentWillMount() {
         var cookie = getCookie('test');
@@ -23,18 +23,19 @@ class Login extends Component {
         }
     }
     render() {
+        const { value, onLogin, onLogout } = this.props;
         let login = (e) => {
             e.preventDefault();
+            console.log(this.props, this);
             if (!username.trim() || !password.trim()) {
-                return
+                return;
             }
-            dispatch(onLogin(username, password))
-        }
+            dispatch(onLogin(username, password));
+        };
         let logout = (e) => {
             e.preventDefault();
-            dispatch(onLogout())
-        }
-        const { value, onLogin, onLogout } = this.props
+            dispatch(onLogout());
+        };
         return (
             <div>
                 <p>User is logged-{ value.uid && value.login ? 'in' : 'out' }</p>
@@ -45,7 +46,7 @@ class Login extends Component {
                             name="username"
                             type="text"
                             ref={node => {
-                                username = node.value
+                                username = node.value;
                             }}
                         />
                     </div>
@@ -55,7 +56,7 @@ class Login extends Component {
                             name="password"
                             type="password"
                             ref={node => {
-                                password = node.value
+                                password = node.value;
                             }}
                         />
                     </div>
@@ -68,4 +69,4 @@ class Login extends Component {
     }
 }
 
-export default connect()(Login)
+export default Login;

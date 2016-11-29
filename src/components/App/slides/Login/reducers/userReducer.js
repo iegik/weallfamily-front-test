@@ -1,5 +1,5 @@
-import USER from '../../Login/constants'
-import APP from '../../App/constants'
+import USER from '../constants'
+import APP from '../../../constants'
 
 export default (state = 0, action) => {
     switch (action.type) {

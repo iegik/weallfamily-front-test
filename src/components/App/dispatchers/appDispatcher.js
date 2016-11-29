@@ -1,15 +1,15 @@
-import APP from '../../../components/App/constants'
-import { APP.LOGIN, APP.LOGOUT, APP.LOGIN_ASYNC } from '../actions'
+import APP from '../../../components/App/constants';
+import { APP.LOGIN, APP.LOGOUT, APP.LOGIN_ASYNC } from '../actions';
 
 export default (state = 0, action) => {
     switch (action.type) {
         case APP.LOGIN:
-            return
+            return;
         case APP.LOGOUT:
-            return
+            return;
         case APP.LOGIN_ASYNC:
-            return
+            return;
         default:
-            return state
+            return state;
     }
 }
