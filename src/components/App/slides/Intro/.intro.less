@@ -3,11 +3,28 @@
     transition: visibility 0s 0.85s;
     z-index: 30;
     .animation-intro-in & {
-        transition: none;
         visibility: visible;
     }
     .animation-home-in & {
-        transition: visibility 0s 0.85s;
         visibility: hidden;
+    }
+    &__content-wrap {
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &__content {
+        padding: 0 15vw;
+        .more {
+            text-align: right;
+            display: block;
+        }
+    }
+    &__title {
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+        font-size: 10vw;
     }
 }
