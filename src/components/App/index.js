@@ -58,7 +58,63 @@ const App = ({}) => (
         </div>
       </div>
     </div>
-    <div className="slide slide_profile profile"></div>
+    <div className="slide slide_profile profile">
+      <div className="profile__content">
+        <form className="form form-md">
+          <div className="form__field field">
+            <img src="https://randomuser.me/api/portraits/lego/1.jpg"/>
+          </div>
+          <div className="form__field field">
+            <input className="field__input"
+              type="text"
+              name="username"
+              placeholder="anonymous"
+            />
+            <label className="field__label"
+              htmlFor="username">
+              Login
+            </label>
+          </div>
+          <div className="form__field field">
+            <input className="field__input"
+              type="text"
+              name="firstName"
+              placeholder="Tom"
+            />
+            <label className="field__label"
+              htmlFor="firstName">First name</label>
+          </div>
+          <div className="form__field field">
+            <input className="field__input"
+              type="text"
+              name="lastName"
+              placeholder="Cruse"
+            />
+            <label className="field__label"
+              htmlFor="lastName">Last name</label>
+          </div>
+          <div className="form__field field">
+            <input className="field__input"
+              type="email"
+              name="email"
+              placeholder="Cruse"
+            />
+            <label className="field__label"
+              htmlFor="email">E-mail</label>
+          </div>
+          <div className="form__field field">
+            <input className="field__input"
+              type="password"
+              name="password"
+              placeholder="P4$$w0rd"
+            />
+            <label className="field__label"
+              htmlFor="password">Password</label>
+          </div>
+          <a className="form__btn btn btn-md btn-md-primary" href="#home">Save</a>
+        </form>
+      </div>
+    </div>
     <div className="header">
       <button className="header__btn btn menu-toggle">
         <i className="icon-hamburger"></i>
@@ -120,4 +176,9 @@ addEventListener('DOMContentLoaded', ()=>{
       root.classList.add(pageClass);
     });
   });
+  setTimeout(()=>{
+    document.querySelectorAll('input[type=text],input[type=email],input[type=password]').forEach((el)=>{
+      (el.onkeyup=()=>el.setAttribute('value', el.value||''))();
+    });
+  }, 1000 * 5)
 });
