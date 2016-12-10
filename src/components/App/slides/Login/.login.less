@@ -1,0 +1,48 @@
+@import '_variables';
+@import '_mixins';
+.login {
+    background-color: #fef8a0;
+    color: #444;
+    transition: visibility 0s 0.85s;
+    z-index: 40;
+    display: table;
+    .animation-login-in & {
+        visibility: visible;
+    }
+    .animation-home-in & {
+        visibility: hidden;
+    }
+    &__content {
+        img {
+            width: 100%;
+            height: auto;
+        }
+        padding: 0 15vw;
+        display: table-cell;
+        vertical-align: middle;
+    }
+    &__title {
+        text-transform: uppercase;
+        text-align: center;
+        color: #fff;
+        font-size: 10vw;
+    }
+    .form {
+        &__field {
+            img {
+                width: 60%;
+                margin: 7vh auto;
+                display: block;
+                border-radius: 6px;
+            }
+        }
+        &__btn {
+            margin: 0 auto;
+            margin-top: 1em;
+
+            &.btn-primary {
+                background-color: #109aff;
+            }
+        }
+    }
+}

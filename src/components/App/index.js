@@ -131,7 +131,33 @@ const App = ({}) => (
         <a href="#login" className="menu__item">Log-in</a>
       </nav>
     </div>
-    <div className="slide slide_login login"></div>
+    <div className="slide slide_login login">
+      <div className="login__content">
+        <form className="form form-md">
+          <div className="form__field field">
+            <input className="field__input"
+              type="text"
+              name="username"
+              placeholder="anonymous"
+            />
+            <label className="field__label"
+              htmlFor="username">
+              Login
+            </label>
+          </div>
+          <div className="form__field field">
+            <input className="field__input"
+              type="password"
+              name="password"
+              placeholder="P4$$w0rd"
+            />
+            <label className="field__label"
+              htmlFor="password">Password</label>
+          </div>
+          <a className="form__btn btn btn-md btn-md-primary" href="#home">Log in</a>
+        </form>
+      </div>
+    </div>
   </div>
 );
 
